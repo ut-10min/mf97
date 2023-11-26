@@ -37,15 +37,15 @@ function construstTimeTable(timeTable, talksData) {
 
 
 $(function () {
-    var firstDayTable = construstTimeTable(day1, data);
-    var secondDayTable = construstTimeTable(day2, data);
-    // var thirdDayTable  = construstTimeTable(day3, data);
+    var DayTable1 = construstTimeTable(day1, data);
+    var DayTable2 = construstTimeTable(day2, data);
+    // var DayTable3  = construstTimeTable(day3, data);
 
     var template = $('#template').html();
     Mustache.parse(template);
-    var renderedFirst = Mustache.render(template, { table: firstDayTable, header: "5/13 (土)" });
-    var renderedSecond = Mustache.render(template, { table: secondDayTable, header: "5/14 (日)" });
-    // var renderedThird  = Mustache.render(template, {table: thirdDayTable,  header: "11/20 (日)"});
-    // $('.article-headline').html(renderedFirst + "<br />" + renderedSecond + "<br />" + renderedThird);
-    $('.article-headline').html(renderedFirst + "<br />" + renderedSecond);
+    var rendered1 = Mustache.render(template, { table: DayTable1, header: "5/13 (土)" });
+    var rendered2 = Mustache.render(template, { table: DayTable2, header: "5/14 (日)" });
+    // var rendered3  = Mustache.render(template, {table: DayTable3,  header: "11/20 (日)"});
+    // $('.article-headline').html(rendered1 + "<br />" + rendered2 + "<br />" + rendered3);
+    $('.article-headline').html(rendered1 + "<br />" + rendered2);
 });
