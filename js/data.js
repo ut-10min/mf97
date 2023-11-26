@@ -4,6 +4,6 @@ var data = [
     "affiliation": "",
     "major": "",
     "title": "",
-    "abstract": ""
-  }
+    "abstract": "",
+  },
 ]
